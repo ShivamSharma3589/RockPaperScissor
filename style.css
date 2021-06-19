@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline:none;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.432);
+    background-image:url("nature.webp");
+    background-size:cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+/* header goes here */
+
+/* heading design goes here */
+#heading,#winner{
+    font-family: 'Sofia', cursive;
+    font-size:2rem;
+    color:white;
+    background-color:black;
+    text-shadow:1px 1px 5px rgb(255, 125, 255),-1px -1px 5px rgb(247, 102, 247);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius:30px;
+    margin: 10px;
+}
+#winner{
+    font-size:1.6rem;
+    text-shadow:1px 1px 5px teal,-1px -1px 5px teal;
+}
+
+/* article section goes here */
+
+/* interface goes here */
+#interface{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    width:70%;
+}
+
+/* box to apply images */
+.box{
+    min-width: 50px;
+    max-width: 230px;
+    margin: 1rem;
+    border-radius: 5px;
+}
+.box img{
+    width: 100%;
+    border-radius:7px;
+}
+
+/* versus image setting goes here */
+.versus{
+    width: 10%;
+}
+.versus img{
+    width: 100%;
+    height:100%;
+    border-radius: 50%;
+}
+
+/* control section goes here */
+#controls{
+    display:none;
+}
+
+button{
+    padding: 0.5rem 1.5rem;
+    border:none;
+    border-radius:5px ;
+    background-color: rgb(255, 255, 0);
+    color:red;
+    font-weight: bold;
+    margin:.7rem 0;
+}
+button:hover{
+    background-color: rgb(248, 248, 44);
+    color:rgb(255, 0, 170);
+    box-shadow:0.5px 0.5px 5px rgb(255, 187, 0);
+}
+button:active{
+    box-shadow:0px 0px 5px rgb(0, 119, 255);
+    color:rgb(0, 119, 255);
+}
+
+/* footer section goes here */
+footer{
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
+footer p a{
+    font-family: 'sofia',monospace;
+    color:white;
+    text-shadow: -1px -1px 2px red,0px 0px 10px rgb(255, 187, 0);
+    font-size:1.3rem;
+}
+footer p a:hover{
+    text-shadow: -1px -1px 10px rgb(255, 81, 0),0px 0px 10px rgb(229, 255, 0);
+    font-size:1.4rem;
+}
+
+/* media queries go here */
+@media (max-width:600px) {
+    html{
+        font-size:10px;
+    }
+    #interface{
+        width:95%;
+    }
+    .box {
+        width:50%;
+    }
+    .versus{
+        width:10%;
+    }
+}
