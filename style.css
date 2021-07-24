@@ -6,9 +6,10 @@
 }
 body{
     background-color: rgba(0, 0, 0, 0.432);
-    background-image:url("nature.webp");
+    background-image:url("desktop.gif");
     background-size:cover;
     background-attachment: fixed;
+    background-position:center;
     text-align: center;
 }
 /* header goes here */
@@ -111,6 +112,11 @@ footer p a:hover{
     html{
         font-size:10px;
     }
+    body{
+        background-image:url("phone.gif");
+        background-size:100vw 100vh;
+    }
+   
     #interface{
         width:95%;
     }
