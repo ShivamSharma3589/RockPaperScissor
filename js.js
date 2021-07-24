@@ -15,6 +15,7 @@ function myFunction() {
       document.getElementById("name").innerHTML =
        person ;
        document.getElementById("controls").style.display="block";
+document.getElementById("myAudio").play();
     }else{
         person="Player";
         document.getElementById("name").innerHTML = person ;
