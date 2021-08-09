@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://shivamsharma3589.github.io/My-Card-Shivam-Sharma/logo-removebg-preview.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
+    <link rel="icon" href="favicon.png"
+        type="image/icon type">
     <title>RockPaperScissors | Game</title>
 </head>
 
@@ -22,7 +27,7 @@
 
     <article>
         <section id="interface">
-            <div class="box" >
+            <div class="box">
                 <img id="computerImage" src="rock.gif" alt="computer selected image">
                 <div class="player">
                     <h2>Computer</h2>
@@ -33,30 +38,26 @@
             <div class="versus">
                 <img src="vs1.gif" alt="versus" width="2000" height="200">
             </div>
-            
+
             <div class="box">
                 <img id="myImage" src="scissor.gif" alt="player selected image">
-                    <h2 class="player" id="name">Player</h2>
-                    <p>Score: <span id="playerScore">0</span></p>
+                <h2 class="player" id="name">Player</h2>
+                <p>Score: <span id="playerScore">0</span></p>
             </div>
         </section>
 
         <section>
             <div>
-                <button onclick="myFunction()">New Game</button>
+                <button id="newGame"">New Game</button>
             </div>
             <div id="controls">
-                <button onclick="paper()">Paper</button> 
-                <button onclick="scissor()">Scissors</button>
-                <button onclick="rock()">Rock</button>
+                    <button id="paper"><i class="fal fa-hand-paper"></i></button>
+                    <button id="scissors"><i class="fal fa-hand-scissors"></i></button>
+                    <button id="rock"><i class="fal fa-hand-rock"></i></button>
             </div>
         </section>
     </article>
-
-    <footer>
-        <p ><a href="https://www.instagram.com/pandatboyy/">@Shivam Sharma</a></p>
-    </footer>
-<audio src="sound.mp3" loop id="myAudio"></audio>
+    <audio src="song.mp3" loop id="myAudio"></audio>
     <script src="js.js"></script>
 </body>
 
