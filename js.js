@@ -1,97 +1,107 @@
-// here my javascript goes
-
-let person;     //global declared variable for holding player's name 
-let cmove,cScore=0,pScore=0;
-
+let person;      
+let cmove, cScore = 0, pScore = 0;
+let myAudio = document.getElementById('myAudio');
+let newGame = document.getElementById('newGame');
+let pape = document.getElementById('paper');
+let scisso = document.getElementById('scissors');
+let roc = document.getElementById('rock');
+let winn = document.getElementById("winner");
+let playerScore = document.getElementById("playerScore");
+let computerScore = document.getElementById("computerScore");
+let name = document.getElementById("name");
+let controls = document.getElementById("controls");
+let computerImage = document.getElementById("computerImage");
+let myImage = document.getElementById('myImage');
+// sound adjustments 
+window.onload=()=>{
+    myAudio.volume=0.5;
+}
 // function to get the user name is here.
 function myFunction() {
     person = prompt("Please enter your name", "Player");
-    cScore=0;
-    pScore=0;
-    document.getElementById("winner").innerHTML="Winner...?";
-    document.getElementById("playerScore").innerHTML=pScore;
-    document.getElementById("computerScore").innerHTML=cScore;
+    cScore = 0;
+    pScore = 0;
+    winn.innerHTML = "Winner...?";
+    playerScore.innerHTML = pScore;
+    computerScore.innerHTML = cScore;
     if (person != null) {
-      document.getElementById("name").innerHTML =
-       person ;
-       document.getElementById("controls").style.display="block";
-document.getElementById("myAudio").play();
+        name.innerHTML = person;
+        controls.style.display = "block";
+        myAudio.play();
     }else{
-        person="Player";
-        document.getElementById("name").innerHTML = person ;
+        name.innerHTML="Player";
+    }
+    if (person == "") {
+        person = "Player";
+        name.innerHTML = person;
     }
 }
-
 // here is the function to get the move from the computer
-function computerMove(){
-    let x = Math.floor((Math.random() * 3) + 1);
-    return x;
+function computerMove() {
+    return Math.floor((Math.random() * 3) + 1);
 }
 
 // here images will appear chosen by computer
-function computerimg(){
+function computerimg() {
     cmove = computerMove();
-    if(cmove==1){
-        document.getElementById("computerImage").src='paper.gif';
-    }else
-    if(cmove==2){
-        document.getElementById("computerImage").src='scissor.gif';
-    }else
-    if(cmove==3){
-        document.getElementById("computerImage").src='rock.gif';
-    }
+    if (cmove == 1) {
+        computerImage.src = 'paper.gif';
+    } else
+        if (cmove == 2) {
+            computerImage.src = 'scissor.gif';
+        } else
+            if (cmove == 3) {
+                computerImage.src = 'rock.gif';
+            }
 }
-
 // function for deciding the winner 
-function subWinner(){
-    let print=document.getElementById
-    ("winner");
-    print.innerHTML=("Winner : " + person);
-    pScore+=1;
-    document.getElementById("playerScore").innerHTML=pScore;
+function subWinner() {
+    winn.innerHTML = ("Winner : " + person);
+    pScore += 1;
+    playerScore.innerHTML = pScore;
 }
-
 // function for deciding the winner 
-function winner(player){
-    let draw="Draw";
-    let com="Winner: computer";
-    if((player==1)&& (cmove==3)){
+function winner(player) {
+    let draw = "Draw";
+    let com = "Winner: computer";
+    if ((player == 1) && (cmove == 3)) {
         subWinner();
-    }else
-    if((player==2)&& (cmove==1)){
-        subWinner();
-    }else
-    if((player==3)&& (cmove==2)){
-        subWinner();
-    }
-    else{
-        if(player==cmove){
-            document.getElementById("winner").innerHTML=draw;
-        }else{
-            document.getElementById("winner").innerHTML=com;
-            cScore+=1;
-            document.getElementById("computerScore").innerHTML=cScore;
-        }
-    }
+    } else
+        if ((player == 2) && (cmove == 1)) {
+            subWinner();
+        } else
+            if ((player == 3) && (cmove == 2)) {
+                subWinner();
+            }
+            else {
+                if (player == cmove) {
+                    winn.innerHTML = draw;
+                } else {
+                    winn.innerHTML = com;
+                    cScore += 1;
+                    computerScore.innerHTML = cScore;
+                }
+            }
 }
-
 // function to show paper
-function paper(){
-    document.getElementById('myImage').src='paper.gif';
+function paper() {
+    myImage.src = 'paper.gif';
     computerimg();
     winner(1);
 }
-
 // function to show paper
-function scissor(){
-    document.getElementById('myImage').src='scissor.gif';
+function scissor() {
+    myImage.src = 'scissor.gif';
     computerimg();
     winner(2);
 }
-
 // function to show paper
-function rock(){
-    document.getElementById('myImage').src='rock.gif';
+function rock() {
+    myImage.src = 'rock.gif';
     computerimg();
     winner(3);
 }
+newGame.addEventListener('click', myFunction);
+pape.addEventListener('click', paper);
+scisso.addEventListener('click', scissor);
+roc.addEventListener('click', rock);
