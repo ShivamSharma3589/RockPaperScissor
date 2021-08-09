@@ -12,6 +12,7 @@ let name = document.getElementById("name");
 let controls = document.getElementById("controls");
 let computerImage = document.getElementById("computerImage");
 let myImage = document.getElementById('myImage');
+let sound = document.getElementById("sound");
 // sound adjustments 
 window.onload=()=>{
     myAudio.volume=0.5;
@@ -27,6 +28,7 @@ function myFunction() {
     if (person != null) {
         name.innerHTML = person;
         controls.style.display = "block";
+        sound.style.display="inline";
         myAudio.play();
     }else{
         name.innerHTML="Player";
@@ -105,3 +107,14 @@ newGame.addEventListener('click', myFunction);
 pape.addEventListener('click', paper);
 scisso.addEventListener('click', scissor);
 roc.addEventListener('click', rock);
+sound.addEventListener('click',()=>{
+    if (myAudio.muted) {
+        sound.className="fa-solid fa-volume";
+        myAudio.muted=false;
+        sound.style.color="white";
+    } else {
+        sound.className="fa-solid fa-volume-xmark";
+        myAudio.muted=true;
+        sound.style.color="red";
+    }
+});
