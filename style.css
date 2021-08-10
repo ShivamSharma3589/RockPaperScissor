@@ -120,7 +120,6 @@ button i{
         background:url("phone.gif");
         background-repeat: no-repeat;
         background-size: 100vw 100vh;
-        background-position:bottom;
     }
     #interface{
         width:95%;
