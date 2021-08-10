@@ -118,7 +118,6 @@ button i{
 @media (max-width:600px) {
     body{
         background:url("phone.gif");
-        background-repeat: no-repeat;
         background-size: 100vw 100vh;
     }
     #interface{
