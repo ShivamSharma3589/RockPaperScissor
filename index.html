@@ -18,6 +18,40 @@
 </head>
 
 <body>
+    
+    <!-- here is sweet alert code goes  -->
+    <div id="sweetAlert">
+        <div id="sweet">
+            <img src="favicon.png" alt="image">
+            <h1>Welcome</h1>
+            <p><strong>Note: </strong>You'll get 3 chances.<br>
+                To win the game you have to get minimum 2 golden stars. <br> 
+            </p>
+            <button id="btn1">Let's Play</button>
+        </div>
+    </div>
+
+    <!-- here is the winner alert code goes  -->
+
+    <div id="winnerAlert">
+        <div id="Alert">
+            <h1>Winner</h1>
+            <h2 id="result"></h2>
+            <div id="Result">
+                <i class="far fa-star fstars"></i>
+                <i class="far fa-star fstars"></i>
+                <i class="far fa-star fstars"></i>
+            </div>
+            <button id="btn2">OK</button>
+        </div>
+    </div>
+
+    <!-- mute/unmute code goes here  -->
+
+    <div ><i id="sound" class="fa-solid fa-volume"></i></div>
+    
+    <!-- beginning of the body  -->
+
     <header>
         <h1 id="heading">Rock Paper Scissors</h1>
         <div>
@@ -25,42 +59,65 @@
         </div>
     </header>
 
-    <div ><i id="sound" class="fa-solid fa-volume"></i></div>
-
     <article>
+
+        <!-- main box goes here -->
+
         <section id="interface">
+
+            <!-- computer moves go here  -->
+
             <div class="box">
                 <img id="computerImage" src="rock.gif" alt="computer selected image">
                 <div class="player">
                     <h2>Computer</h2>
-                    <p>Score: <span id="computerScore">0</span></p>
+                    <h2 id="computerScore">
+                        <i class="far fa-star star"></i>
+                        <i class="far fa-star star"></i>
+                        <i class="far fa-star star"></i>
+                    </h2>
                 </div>
             </div>
 
             <div class="versus">
                 <img src="vs1.gif" alt="versus" width="2000" height="200">
-            </div>
+            </div> 
+
+            <!-- players move goes here  -->
 
             <div class="box">
                 <img id="myImage" src="scissor.gif" alt="player selected image">
                 <h2 class="player" id="name">Player</h2>
-                <p>Score: <span id="playerScore">0</span></p>
+                <h2 id="playerScore">
+                    <i class="far fa-star star"></i>
+                    <i class="far fa-star star"></i>
+                    <i class="far fa-star star"></i>
+                </h2>
             </div>
+
         </section>
 
+        <!-- control buttons go here  -->
+
         <section>
+
             <div>
                 <button id="newGame"">New Game</button>
             </div>
+            
             <div id="controls">
                     <button id="paper"><i class="fal fa-hand-paper"></i></button>
                     <button id="scissors"><i class="fal fa-hand-scissors"></i></button>
                     <button id="rock"><i class="fal fa-hand-rock"></i></button>
             </div>
+
         </section>
     </article>
+
+    <!-- audio tag goes here  -->
+
     <audio src="sound.mp3" loop id="myAudio"></audio>
+    
     <script src="js.js"></script>
 </body>
-
 </html>
