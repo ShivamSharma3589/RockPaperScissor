@@ -188,7 +188,7 @@ button i{
 /* media queries go here */
 @media (max-width:600px) {
     html{
-        font-size: 13px;
+        font-size: 15px;
     }
     body{
         background:url("phone.gif");
