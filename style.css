@@ -137,7 +137,6 @@ body{
 /* versus image setting goes here */
 .versus{
     width: 10%;
-    /* border:1px solid black; */
 }
 .versus img{
     width: 100%;
@@ -184,11 +183,13 @@ button i{
     border-radius:50%;
     margin: 0 .5rem;
     padding: 0.5rem ;
+    width: 3.6rem;
+    height: 3.6rem;
 }
 /* media queries go here */
 @media (max-width:600px) {
     html{
-        font-size: 15px;
+        font-size: 13px;
     }
     body{
         background:url("phone.gif");
@@ -207,5 +208,9 @@ button i{
     }
     .versus{
         width:10%;
+    }
+    #sweet,#Alert{
+        width: 100%;
+        margin: 0 auto;
     }
 }
