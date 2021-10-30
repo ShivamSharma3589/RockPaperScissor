@@ -30,13 +30,20 @@ body{
 }
 #sweet,#Alert{
     width: 20rem;
-    min-width:1rem;
     background-color: white;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.356);
     border-radius: .5rem;
-    transform: scale(0);
-    transition: 0.5s linear;
+    animation: POP-UP 0.6s ease-in-out;
+    margin: 2rem;
+}
+@keyframes POP-UP{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 #sweetAlert img{
     width: 5rem;
@@ -50,6 +57,27 @@ body{
     background-color: rgb(0, 119, 255);
     font-weight: 400;
     margin: 0;
+    min-width: 160px;
+}
+#btn1{
+    background-color: rgb(143, 143, 143);
+}
+#loading-circle{
+    border-radius: 50%;
+    border: 3px solid white;
+    border-right-color: rgba(255, 255, 255, 0.541);
+    display: inline-block;
+    padding: 7px;
+    margin-top: 4px;
+    animation: LoadingCircleAnimation .9s linear infinite;
+}
+@keyframes LoadingCircleAnimation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 /* winner alert code goes here  */
 #winnerAlert{
@@ -57,9 +85,11 @@ body{
 }
 #Alert{
     border:none;
-    box-shadow:inset 1px 1px 5px rgb(255, 0, 255);
+    box-shadow: 0px 0px 5px rgb(255, 0, 255);
+    padding-top: 0;
+    padding-bottom: 0;
     background:black;
-    font-variant:small-caps;
+    /* font-variant:small-caps; */
 }
 #result{
     font-size: 2rem;
@@ -122,6 +152,8 @@ body{
     background-color: white;
     border-radius: 10px;
     width:60%;
+    min-width: 37rem;
+    min-height: 305px;
 }
 /* box to apply images */
 .box{
@@ -188,20 +220,22 @@ button i{
 }
 /* media queries go here */
 @media (max-width:600px) {
-    html{
+    /* html{
         font-size: 13px;
-    }
+    } */
     body{
         background:url("phone.gif");
         background-size: 100vw 100vh;
         height: 100vh;
         width: 100%;
     }
-    #sweet,#Alert{
+    /* #sweet,#Alert{
         width: 80%;
-    }
+    } */
     #interface{
         width:95%;
+        min-width: 14rem;
+        min-height: 198px;
     }
     .box {
         width:50%;
@@ -209,8 +243,8 @@ button i{
     .versus{
         width:10%;
     }
-    #sweet,#Alert{
+    /* #sweet,#Alert{
         width: 100%;
         margin: 0 auto;
-    }
+    } */
 }
