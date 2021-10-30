@@ -20,9 +20,13 @@ let winnerAlert = document.getElementById('winnerAlert');
 let btn1 = document.getElementById('btn1');
 let btn2 = document.getElementById('btn2');
 
-// sound adjustments 
 window.onload = () => {
-    sweet.style.transform = "scale(1)";
+    // sweet alert button code goes here
+    btn1.innerText = "Let's Play";
+    btn1.style.backgroundColor = 'rgb(0, 119, 255)';
+    btn1.addEventListener('click', () => {
+        sweetAlert.style.display = 'none';
+    });
 }
 // to announce the winner 
 function announcement() {
@@ -37,12 +41,14 @@ function announcement() {
             for (let i = 0; i < cScore; i++) {
                 fstars[i].className = 'fas fa-star fstars';
                 fstars[i].style.color = 'gold';
+                fstars[i].style.textShadow = ' 0 0 5px red';
             }
         } else {
             result.innerHTML = person;
-            for (let i = 0; i < pScore-3; i++) {
+            for (let i = 0; i < pScore - 3; i++) {
                 fstars[i].className = 'fas fa-star fstars';
                 fstars[i].style.color = 'gold';
+                fstars[i].style.textShadow = ' 0 0 5px red';
             }
         }
     }
@@ -171,10 +177,7 @@ sound.addEventListener('click', () => {
         sound.style.color = "red";
     }
 });
-// sweet alert button code goes here
-btn1.addEventListener('click', () => {
-    sweetAlert.style.display = 'none';
-});
+
 // winner alert code goes here 
 btn2.addEventListener('click', () => {
     winnerAlert.style.display = 'none';
